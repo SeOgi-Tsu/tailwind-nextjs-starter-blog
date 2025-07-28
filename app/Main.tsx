@@ -242,7 +242,7 @@ export default function Home({ posts }) {
                       </div>
 
                       {/* 标题 */}
-                      <h3 className="text-2xl font-bold leading-tight text-gray-900 transition-colors group-hover:text-purple-600 dark:text-white dark:group-hover:text-purple-400">
+                      <h3 className="text-2xl leading-tight font-bold text-gray-900 transition-colors group-hover:text-purple-600 dark:text-white dark:group-hover:text-purple-400">
                         <Link href={`/blog/${slug}`}>{title}</Link>
                       </h3>
 
