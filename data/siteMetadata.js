@@ -6,7 +6,7 @@ const siteMetadata = {
   description: 'DreamWeebs AI次元社 - 探索AI与二次元的奇妙世界',
   language: 'zh-cn',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://dreamweebs.vercel.app',
+  siteUrl: 'https://dreamweebs-ai.vercel.app/',
   siteRepo: 'https://github.com/SeOgi-Tsu/tailwind-nextjs-starter-blog',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.png`,
