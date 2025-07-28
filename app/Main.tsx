@@ -15,7 +15,7 @@ export default function Home({ posts }) {
             🌟 DreamWeebs AI次元社
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
+            👋 欢迎来到二次元与AI的奇妙世界！这里记录我在AI绘画、视频生成、模型训练等方面的探索与分享，希望能为同样热爱技术的你带来灵感~ ✨
           </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
