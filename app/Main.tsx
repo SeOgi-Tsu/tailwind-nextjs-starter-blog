@@ -15,10 +15,10 @@ export default function Home({ posts }) {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900"></div>
 
         {/* 几何装饰元素 */}
-        <div className="absolute right-0 top-0 h-72 w-72 rounded-full bg-gradient-to-bl from-blue-400/10 to-purple-400/10 blur-3xl"></div>
+        <div className="absolute top-0 right-0 h-72 w-72 rounded-full bg-gradient-to-bl from-blue-400/10 to-purple-400/10 blur-3xl"></div>
         <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-gradient-to-tr from-purple-400/10 to-pink-400/10 blur-3xl"></div>
 
-        <div className="relative space-y-8 pb-12 pt-16 md:space-y-10 md:pb-16 md:pt-20">
+        <div className="relative space-y-8 pt-16 pb-12 md:space-y-10 md:pt-20 md:pb-16">
           {/* 主标题区域 */}
           <div className="space-y-6 text-center">
             {/* Logo/Brand */}
@@ -70,7 +70,7 @@ export default function Home({ posts }) {
 
       {/* 最新教程区域 */}
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-6 pb-8 pt-12">
+        <div className="space-y-6 pt-12 pb-8">
           {/* 区域标题 */}
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
@@ -140,16 +140,14 @@ export default function Home({ posts }) {
                     <div className="xl:col-span-1">
                       <div className="inline-flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
                         <div className="h-2 w-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 group-hover:animate-pulse"></div>
-                        <time dateTime={date}>
-                          {formatDate(date, siteMetadata.locale)}
-                        </time>
+                        <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                       </div>
                     </div>
 
                     {/* 文章内容 */}
                     <div className="space-y-4 xl:col-span-3">
                       <div className="space-y-3">
-                        <h3 className="text-xl font-bold leading-8 tracking-tight">
+                        <h3 className="text-xl leading-8 font-bold tracking-tight">
                           <Link
                             href={`/blog/${slug}`}
                             className="text-gray-900 transition-colors duration-200 hover:text-blue-600 dark:text-gray-100 dark:hover:text-blue-400"
@@ -166,7 +164,7 @@ export default function Home({ posts }) {
                       <div className="prose line-clamp-3 max-w-none text-gray-500 dark:text-gray-400">
                         {summary}
                       </div>
-                      <div className="text-base font-medium leading-6">
+                      <div className="text-base leading-6 font-medium">
                         <Link
                           href={`/blog/${slug}`}
                           className="inline-flex items-center space-x-1 text-blue-600 transition-colors duration-200 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
@@ -225,9 +223,7 @@ export default function Home({ posts }) {
               <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500">
                 <span className="text-2xl text-white">📧</span>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                订阅获取最新教程
-              </h3>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">订阅获取最新教程</h3>
               <p className="mx-auto max-w-2xl text-gray-600 dark:text-gray-300">
                 第一时间获取最新的AI教程、技巧分享和学习资源，加入我们的学习社区！
               </p>
