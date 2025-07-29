@@ -3,7 +3,6 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
-import Image from '@/components/Image'
 
 const MAX_DISPLAY = 5
 
@@ -14,58 +13,67 @@ export default function Home({ posts }) {
       <div className="relative overflow-hidden">
         {/* 背景渐变效果 */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-          <div className="absolute top-0 -right-4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+          <div className="absolute top-0 -left-4 h-72 w-72 animate-blob rounded-full bg-purple-300 opacity-70 mix-blend-multiply blur-xl filter"></div>
+          <div className="absolute top-0 -right-4 h-72 w-72 animate-blob rounded-full bg-yellow-300 opacity-70 mix-blend-multiply blur-xl filter animation-delay-2000"></div>
+          <div className="absolute -bottom-8 left-20 h-72 w-72 animate-blob rounded-full bg-pink-300 opacity-70 mix-blend-multiply blur-xl filter animation-delay-4000"></div>
         </div>
 
         <div className="relative space-y-2 pb-8 pt-6 md:space-y-5 md:pt-10 lg:pt-16">
           {/* 标题区域 */}
           <div className="flex flex-col items-center text-center">
-            <div className="flex items-center space-x-2 mb-4">
+            <div className="mb-4 flex items-center space-x-2">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur-lg opacity-75"></div>
-                <div className="relative bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold py-2 px-6 rounded-full text-sm">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 to-purple-600 opacity-75 blur-lg"></div>
+                <div className="relative rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 px-6 py-2 text-sm font-bold text-white">
                   🚀 每周更新 AI 前沿
                 </div>
               </div>
             </div>
-            
-            <h1 className="text-4xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl sm:leading-10 md:text-6xl md:leading-14 mb-4">
+
+            <h1 className="mb-4 text-4xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl sm:leading-10 md:text-6xl md:leading-14">
               <span className="block">探索人工智能的</span>
               <span className="block bg-gradient-to-r from-cyan-500 to-purple-600 bg-clip-text text-transparent">
                 无限可能
               </span>
             </h1>
-            
-            <p className="text-lg leading-7 text-gray-500 dark:text-gray-400 max-w-2xl">
+
+            <p className="max-w-2xl text-lg leading-7 text-gray-500 dark:text-gray-400">
               {siteMetadata.description || '深入浅出解析 AI 技术，分享最新研究成果、实用工具和行业洞察'}
             </p>
 
             {/* 快速导航按钮 */}
-            <div className="flex flex-wrap gap-4 mt-8 justify-center">
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Link
                 href="/blog"
-                className="group relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium text-white transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md hover:shadow-xl"
+                className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border-2 border-purple-500 px-6 py-3 font-medium text-white shadow-md transition duration-300 ease-out hover:shadow-xl"
               >
-                <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                <span className="absolute inset-0 flex h-full w-full -translate-x-full items-center justify-center bg-purple-500 text-white duration-300 ease group-hover:translate-x-0">
+                  <svg
+                    className="h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    ></path>
                   </svg>
                 </span>
-                <span className="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease">
+                <span className="absolute flex h-full w-full transform items-center justify-center text-purple-500 transition-all duration-300 ease group-hover:translate-x-full">
                   浏览所有文章
                 </span>
-                <span className="relative invisible">浏览所有文章</span>
+                <span className="invisible relative">浏览所有文章</span>
               </Link>
 
               <Link
                 href="/tags"
-                className="group relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-gray-300 dark:border-gray-600 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
+                className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border-2 border-gray-300 px-6 py-3 font-medium transition duration-300 ease-out hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-800"
               >
-                <span className="text-gray-600 dark:text-gray-300">
-                  🏷️ 探索标签
-                </span>
+                <span className="text-gray-600 dark:text-gray-300">🏷️ 探索标签</span>
               </Link>
             </div>
           </div>
@@ -87,51 +95,56 @@ export default function Home({ posts }) {
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && '暂无文章'}
           {posts.slice(0, MAX_DISPLAY).map((post) => {
-            const { slug, date, title, summary, tags, images } = post
+            const { slug, date, title, summary, tags } = post
             return (
-              <li key={slug} className="py-8 group">
+              <li key={slug} className="group py-8">
                 <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                   <dl>
                     <dt className="sr-only">发布时间</dt>
-                    <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                    <dd className="text-base leading-6 font-medium text-gray-500 dark:text-gray-400">
                       <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                     </dd>
                   </dl>
-                  
+
                   <div className="space-y-3 xl:col-span-3">
                     <div>
-                      <h3 className="text-2xl font-bold leading-8 tracking-tight">
+                      <h3 className="text-2xl leading-8 font-bold tracking-tight">
                         <Link
                           href={`/blog/${slug}`}
-                          className="text-gray-900 dark:text-gray-100 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300"
+                          className="text-gray-900 transition-colors duration-300 group-hover:text-purple-600 dark:text-gray-100 dark:group-hover:text-purple-400"
                         >
                           {title}
                         </Link>
                       </h3>
-                      
-                      <div className="flex flex-wrap mt-2">
-                        {tags?.map((tag) => (
-                          <Tag 
-                            key={tag} 
-                            text={tag} 
-                          />
-                        ))}
+
+                      <div className="mt-2 flex flex-wrap">
+                        {tags?.map((tag) => <Tag key={tag} text={tag} />)}
                       </div>
                     </div>
-                    
+
                     <div className="prose max-w-none text-gray-500 dark:text-gray-400">
                       {summary}
                     </div>
-                    
-                    <div className="text-base font-medium leading-6">
+
+                    <div className="text-base leading-6 font-medium">
                       <Link
                         href={`/blog/${slug}`}
-                        className="inline-flex items-center text-purple-600 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300 transition-colors duration-300"
+                        className="inline-flex items-center text-purple-600 transition-colors duration-300 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300"
                         aria-label={`阅读更多关于 "${title}"`}
                       >
                         阅读更多
-                        <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                        <svg
+                          className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M9 5l7 7-7 7"
+                          />
                         </svg>
                       </Link>
                     </div>
@@ -145,14 +158,14 @@ export default function Home({ posts }) {
 
       {/* 查看更多文章 */}
       {posts.length > MAX_DISPLAY && (
-        <div className="flex justify-end text-base font-medium leading-6">
+        <div className="flex justify-end text-base leading-6 font-medium">
           <Link
             href="/blog"
-            className="inline-flex items-center text-purple-600 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300 transition-colors duration-300"
+            className="inline-flex items-center text-purple-600 transition-colors duration-300 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300"
             aria-label="查看所有文章"
           >
             查看所有文章
-            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
             </svg>
           </Link>
@@ -163,11 +176,11 @@ export default function Home({ posts }) {
       {siteMetadata.newsletter?.provider && (
         <div className="flex items-center justify-center pt-12">
           <div className="w-full max-w-2xl">
-            <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+            <div className="rounded-2xl bg-gradient-to-r from-purple-50 to-pink-50 p-8 shadow-lg dark:from-gray-800 dark:to-gray-900">
+              <h3 className="mb-2 text-2xl font-bold text-gray-900 dark:text-gray-100">
                 📬 订阅 AI 周刊
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-6">
+              <p className="mb-6 text-gray-600 dark:text-gray-400">
                 每周获取精选的 AI 技术文章和行业动态
               </p>
               <NewsletterForm />
