@@ -114,7 +114,6 @@ export default function Home({ posts }) {
                           <Tag 
                             key={tag} 
                             text={tag} 
-                            className="mr-3 text-sm font-medium text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-300"
                           />
                         ))}
                       </div>
