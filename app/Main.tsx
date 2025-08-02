@@ -113,7 +113,9 @@ export default function Home({ posts }) {
                       </h3>
 
                       <div className="mt-2 flex flex-wrap">
-                        {tags?.map((tag) => <Tag key={tag} text={tag} />)}
+                        {tags?.map((tag) => (
+                          <Tag key={tag} text={tag} />
+                        ))}
                       </div>
                     </div>
 

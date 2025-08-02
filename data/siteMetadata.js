@@ -3,7 +3,8 @@ const siteMetadata = {
   title: 'DreamWeebs AI次元社',
   author: 'SeOgi-Tsu',
   headerTitle: 'DreamWeebs AI次元社',
-  description: '每日更新最新 AI 教程，从 ComfyUI 到 LoRA 训练，与萌新一起探索二次元 AI 创作的无限可能！',
+  description:
+    '每日更新最新 AI 教程，从 ComfyUI 到 LoRA 训练，与萌新一起探索二次元 AI 创作的无限可能！',
   language: 'zh-cn',
   theme: 'system', // system, dark or light
   siteUrl: 'https://dreamweebs-ai.vercel.app',
